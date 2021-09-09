@@ -1,10 +1,20 @@
+import { Route, Switch } from "react-router-dom";
 import "./styles.css";
-
-export default function App() {
+import Home from "./Home";
+import Contact from "./Contact";
+import Services from "./Services";
+import About from "./About";
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/services" component={Services} />
+        <Route exact path="/contact" component={Contact} />
+      </Switch>
+    </>
   );
-}
+};
+export default App;
+/*{}*/
